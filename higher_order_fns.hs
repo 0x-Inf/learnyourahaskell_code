@@ -89,6 +89,7 @@ largestDivisible = head (filter p [100000,99999..])
 -- We take the resulting number and apply the same thing to it, which produces a new number and so on.
 -- We want to know for all starting numbers between 1 and 100, how many chains have a length greater than 15?
 chain :: (Integral a) => a -> [a]
+chain 0 = error "This will break the computer!! haha"
 chain 1 = [1]
 chain n
     | even n = n:chain (n `div` 2)
@@ -142,6 +143,7 @@ map'' :: (a -> b) -> [a] -> [b]
 map'' f xs = foldr (\x acc -> f x : acc) [] xs
 
 -- Some other standard lib fn using folds
+-- Foldr1 is like foldr but the 'input' doesn't have to be defined makes use of currying
 maximum' :: (Ord a) => [a] -> a
 maximum' = foldr1 (\x acc -> if x > acc then x else acc)
 
