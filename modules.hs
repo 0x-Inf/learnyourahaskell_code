@@ -101,7 +101,7 @@ search needle haystack =
 -- ghci> findIndices (`elem` ['A'..'Z']) "Where Are The Caps?"
 
 -- zip and zipWith have variants that take more than just two lists i.e zip3, zipWith3 zip4 zipWith4 etc upto 7
--- zipWith3 (\x y z -> x + y + z) [1,2,3] [4,5,2,2] [2,2,3]
+-- ghci> zipWith3 (\x y z -> x + y + z) [1,2,3] [4,5,2,2] [2,2,3]
 
 -- lines is a useful function when dealing with files or input from somewhere. It takes a string and returns every line of that string in a separate list.
 -- ghci> lines "first line\nsecond line\nthird line"
@@ -234,6 +234,7 @@ phoneBookToMap' xs  = Map.fromListWith (++) $ map (\(k,v) -> (k,[v])) xs
 -- It inserts a key-value pair into a map, but if that map already contains the key, it uses the function passed to it to determine what to do.
 -- ghci> Map.insertWith (+) 3 100 $ Map.fromList [(3,4),(5,103),(6,339)]
 
+-- Data.Set: some fn examples
 -- The fromList function works much like you would expect. It takes a list and converts it into a set.
 text1 = "I just had an anime dream. Anime... Reality... Are they so different?"
 text2 = "The old man left his garbage can out and now his trash is all over my lawn"
