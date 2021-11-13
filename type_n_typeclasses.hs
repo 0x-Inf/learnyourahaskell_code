@@ -339,8 +339,9 @@ instance Functor' (Either a) where
     fmap' f (Left x) = Left x
 
 -- We'll try and make Map k is made an instance of functor
--- instance Functor' (Map.Map k) where
---     fmap' f (b a) =  k (f v)
+instance Functor' (Map.Map k) where
+    fmap' = Map.map
+    -- fmap' f x = Map.fromList $ map (\(p, q) -> (p, f q)) $ Map.toList x
 
 
 
