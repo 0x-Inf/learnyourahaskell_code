@@ -1,0 +1,7 @@
+-- Applicative functors are a good way to implement complex calculations (i.e In in this case ) 
+-- for instance d.p can be implemented as a series of applicative functor instances 
+-- we have the resultant types of some functions get fed as 'input' types of other functions
+-- and on it goes for every 'change' in the build up functions 
+
+-- some pseudo code 
+nextMove <$> longHorizon <*> shortHorizon <*> cummulativeReward <*> thothStateGraph  
