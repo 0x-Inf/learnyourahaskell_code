@@ -55,7 +55,7 @@ instance Functor ((->) r) where
 
 -- some more ghci examples
 -- ghci> fmap (replicate 3) (Right "bar")
--- ghci> fmap (replocate 3) (Just 4)
+-- ghci> fmap (replicate 3) (Just 4)
 -- ghci> fmap (replicate 3) [1,2,3,4]
 
 

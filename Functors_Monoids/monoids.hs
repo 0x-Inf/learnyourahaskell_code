@@ -220,4 +220,4 @@ testTree = Node 5
 -- converting our Tree to list
 -- ghci> F.foldMap (\x -> [x]) testTree
 
--- These tricks are just limited to trees, they work on any instance of Foldable
+-- These tricks are not just limited to trees, they work on any instance of Foldable

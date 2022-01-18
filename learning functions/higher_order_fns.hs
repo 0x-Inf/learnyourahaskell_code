@@ -181,7 +181,7 @@ sqrtSums = length (takeWhile (<1000) (scanl1 (+) (map sqrt [1..]))) + 1
 -- (.) :: (b -> c) -> (a -> b) -> a -> c
 -- f . g = \x -> f (g x)
 -- Examples : ghci> map (negate . abs) [5,-3,-6,7,-3,2,-19,24]
---            ghci>sum . replicate 5 . max 6.7 $ 8.9 equivalent to sum . replicate 5 . max 6.7 $ 8.9
+--            ghci>  equivalent to sum . replicate 5 . max 6.7 $ 8.9
 --            ghci>replicate 100 . product . map (*3) . zipWith max [1,2,3,4,5] $ [4,5,6,7,8]
 
 oddSquareSum :: Integer
