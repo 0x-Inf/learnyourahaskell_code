@@ -22,13 +22,14 @@ class (Functor f) => Applicative f where
 -- It's sort of a beefed up fmap
 -- <*> takes a functor that has a function in it and another functor and sort of extracts that function from the first functor and then maps it 
 -- over the second one
+
 data Maybe' a = Nothing' | Just' a deriving (Show)
 
-data PlayerToken a = PlayerToken {
-    name :: String,
-    clan :: String,
-    hp :: Integer
-} deriving (Show , Ord , Eq)
+-- data PlayerToken a = PlayerToken {
+--     name :: String,
+--     clan :: String,
+--     hp :: Integer
+-- } deriving (Show , Ord , Eq)
 
 instance Functor Maybe' where
     fmap f (Just' x) = Just' (f x)
