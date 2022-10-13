@@ -65,12 +65,12 @@ sum' :: (Num a) => [a] -> a
 sum' [] = 0
 sum' (x:xs) = x + sum' xs
 
--- an quick and dirty example on patterns, used to break smth into patterns while still keeping a reference to the whole thing
+-- a quick and dirty example on patterns, used to break smth into patterns while still keeping a reference to the whole thing
 capital :: String -> String 
 capital "" = "Empty string whooops!"
 capital all@(x:xs) = "The first letter of " ++ all ++ " is " ++ [x]
 
--- Guards, the're like if statements, for testing whether some property holds added a where later 
+-- Guards, the're like if statements, for testing whether some property of a value is true or false added a where later 
 bmiTell :: (RealFloat a) => a ->  a -> String 
 bmiTell weight height
     | bmi <= skinny = "You're underweight, you emo, you!"
@@ -125,6 +125,10 @@ head'' :: [a] -> a
 head'' xs  = case xs of [] -> error "No head for empty lists!"
                         (x:_) -> x
 
+-- this is the syntax of a case expression 
+-- case expression of pattern -> result  
+--                    pattern -> result  
+--                    pattern -> result 
 
 -- Whereas pattern matching on function parameters can only be done when defining functions, case expressions can be used pretty much anywhere.
 describeList :: [a] -> String 
@@ -138,3 +142,4 @@ describeList' xs = "The list is " ++ what xs
     where what [] = "empty."
           what [x] = "a singleton list."
           what xs = "a longer list."
+
